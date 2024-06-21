@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form action="{{ url_for('submit_feedback') }}" method="post" id="feedbackForm">
+        <label for="customerSupport">Customer Support:</label>
+        <select id="customerSupport" name="customerSupport">
+            <option value="5">Excellent</option>
+            <option value="4">Good</option>
+            <option value="3">Average</option>
+            <option value="2">Poor</option>
+            <option value="1">Very Poor</option>
+        </select><br><br>
+
+        <label for="cleanliness">Cleanliness:</label>
+        <select id="cleanliness" name="cleanliness">
+            <option value="5">Excellent</option>
+            <option value="4">Good</option>
+            <option value="3">Average</option>
+            <option value="2">Poor</option>
+            <option value="1">Very Poor</option>
+        </select><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
